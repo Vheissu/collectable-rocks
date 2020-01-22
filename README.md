@@ -1,6 +1,6 @@
 # collectable-rocks
 
-This project is bootstrapped by [aurelia/new](https://github.com/aurelia/new).
+The Collectablerocks.com front-end.
 
 ## Start dev web server
 

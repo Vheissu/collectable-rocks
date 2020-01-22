@@ -1,5 +1,5 @@
 import Aurelia, { StyleConfiguration, CustomElement } from 'aurelia';
-import { MyApp } from '../src/my-app';
+import { App } from '../src/app';
 
 function createAu(template: string, ...deps: readonly unknown[]) {
   const wrapper = CustomElement.define({name: 'wrapper', template});
@@ -14,15 +14,15 @@ function cleanup() {
   }
 }
 
-describe('my-app', () => {
+describe('app', () => {
   afterEach(() => {
     cleanup();
   });
 
   it('should render message', async () => {
-    const au = createAu('<my-app></my-app>', MyApp);
+    const au = createAu('<app></app>', App);
     await au.start().wait();
-    const node = document.querySelector('my-app');
+    const node = document.querySelector('app');
     // In Shadow DOM open mode, shadowRoot is also accessible through DOM API
     //   node.shadowRoot
     // But only Aurelia API can access shadowRoot in both open and closed mode.
